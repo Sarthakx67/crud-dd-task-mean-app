@@ -11,6 +11,7 @@ services:
       - mongo_data:/data/db
 
   backend:
+    image: your-dockerhub-username/crud-dd-task-backend:latest
     build: ./backend
     container_name: crud-dd-task-backend
     restart: always
@@ -23,6 +24,7 @@ services:
       - mongo
 
   frontend:
+    image: your-dockerhub-username/crud-dd-task-frontend:latest
     build: ./frontend
     container_name: crud-dd-task-frontend
     restart: always

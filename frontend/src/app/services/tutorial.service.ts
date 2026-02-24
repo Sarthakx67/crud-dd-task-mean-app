@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Tutorial } from '../models/tutorial.model';
 
-const apiHost = window.location.hostname;
-const baseUrl = `http://${apiHost}:8080/api/tutorials`;
+// Frontend talks to nginx on port 80, nginx proxies /api to backend
+const baseUrl = '/api/tutorials';
 
 @Injectable({
   providedIn: 'root'
